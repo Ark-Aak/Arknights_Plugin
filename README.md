@@ -9,9 +9,9 @@
 
 现阶段指令（发送指令时需要带有 [MAA] 前缀）：
 
-- **addTask <taskType>** 添加一个任务。
+- **addTask \<taskType\>** 添加一个任务。
 - **screenshot** 发送截图（需要配置 adb）。
-- **changeProfile <profile>** 切换 MAA 配置文件。
+- **changeProfile \<profile\>** 切换 MAA 配置文件。
 
 现在支持如下任务：
 
