@@ -16,21 +16,11 @@ const express = require('express');
 const app = express();
 
 let waitForReport = [];
-let waitForPushdown = [];
 let tasksInQueue = [];
-
-const getTasks = () => {
-    return waitForPushdown;
-};
-
-const clearTasks = () => {
-    waitForPushdown = [];
-};
 
 const addTask = (taskType, contact, param = null) => {
     const taskId = getRandomString(15, '0123456789');
-    waitForPushdown.push(param ? {id: taskId, type: taskType, params: param} : {id: taskId, type: taskType})
-    tasksInQueue.push({ id: taskId, type: taskType, contact: contact });
+    tasksInQueue.push(param ? {id: taskId, type: taskType, params: param, contact: contact } : {id: taskId, type: taskType, contact: contact });
     return taskId;
 }
 
@@ -55,6 +45,7 @@ function finish(taskId, status) {
 async function initExpress() {
     let options = await LiteLoader.api.config.get("arknights_plugin");
     app.use(express.json());
+    app.get('/get', (req, res) => res.status(200).json({ tasks: tasksInQueue }));
     app.post('/get', async (req, res) => {
         const { user } = req.body;
         let options = await LiteLoader.api.config.get("arknights_plugin");
@@ -62,7 +53,7 @@ async function initExpress() {
             res.status(400).json({ message: 'UserId does not match' });
         }
         else {
-            res.status(200).json({ tasks: getTasks() });
+            res.status(200).json({ tasks: tasksInQueue });
             clearTasks();
         }
     });
