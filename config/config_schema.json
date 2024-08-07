@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LiteLoaderQQNT Arknights Plugin settings",
+    "properties": {
+        "adb_address": {
+            "type": "string",
+            "title": "adb 连接地址",
+            "description": "adb 的连接地址"
+        },
+        "userId": {
+            "type": "string",
+            "title": "用户标识符",
+            "description": "MAA 的用户标识符"
+        },
+        "maa_port": {
+            "type": "integer",
+            "title": "MAA 监听端口",
+            "description": "MAA 监听的端口"
+        },
+        "maa_path": {
+            "type": "string",
+            "title": "MAA 可执行文件路径",
+            "description": "MAA 可执行文件路径"
+        },
+        "allowed_group": {
+            "type": "array",
+            "title": "允许使用的群聊",
+            "description": "允许使用的群聊"
+        }
+    },
+    "required": [
+        "adb_address",
+        "maa_port",
+        "userId",
+        "maa_path",
+        "allowed_group"
+    ]
+}

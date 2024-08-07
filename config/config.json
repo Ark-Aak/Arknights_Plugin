@@ -1,0 +1,8 @@
+{
+    "$schema": "./config_schema.json",
+    "adb_address": "127.0.0.1:16384",
+    "maa_port": 3000,
+    "userId": "YOURUSERID",
+    "maa_path": "D:\\MAA\\MAA.exe",
+    "allowed_group": []
+}

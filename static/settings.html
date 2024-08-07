@@ -1,0 +1,104 @@
+<style>
+	.arknights_plugin input {
+        align-self: normal;
+        flex: 1;
+        border-radius: 4px;
+        margin-right: 12px;
+        padding: 2px 4px;
+        transition: all 100ms ease-out;
+        background-color: var(--overlay_active);
+	}
+
+	.arknights_plugin input:focus {
+        padding-left: 4px;
+    }
+
+	.arknights_plugin .input-group {
+		display: flex;
+        flex-direction: row;
+        margin-top: 8px;
+		margin-bottom: 8px;
+	}
+
+	.arknights_plugin .ops-btns > *:not(:last-child) {
+        margin-right: 4px;
+    }
+
+	.arknights_plugin setting-item > div {
+        width: 100%;
+    }
+
+	/* 第一次写，借用了 LLQQNT-TTS 的 css /kel*/
+</style>
+
+<setting-section data-title="adb 连接设置">
+	<setting-panel>
+		<setting-list data-direction="column">
+			<setting-item>
+				<div>
+					<setting-text>adb 连接地址</setting-text>
+					<div class="input-group">
+						<input type="text" spellcheck="false" class="ap-adb-address"></input>
+						<div class="ops-btns">
+							<setting-button data-type="secondary" class="ap-adb-address-apply">应用</setting-button>
+							<setting-button data-type="secondary" class="ap-adb-address-reset">恢复默认</setting-button>
+						</div>
+					</div>
+				</div>
+			</setting-item>
+	</setting-panel>
+</setting-section>
+<setting-section data-title="MAA API 设置">
+	<setting-panel>
+		<setting-list data-direction="column">
+			<setting-item>
+				<div>
+					<setting-text>监听端口</setting-text>
+					<div class="input-group">
+						<input type="number" min="1" max="65535" spellcheck="false" class="ap-maa-port"></input>
+						<div class="ops-btns">
+							<setting-button data-type="secondary" class="ap-maa-port-apply">应用</setting-button>
+						</div>
+					</div>
+				</div>
+			</setting-item>
+			<setting-item>
+				<div>
+					<setting-text>用户标识符</setting-text>
+					<div class="input-group">
+						<input type="text" spellcheck="false" class="ap-maa-userId"></input>
+						<div class="ops-btns">
+							<setting-button data-type="secondary" class="ap-maa-userId-apply">应用</setting-button>
+						</div>
+					</div>
+				</div>
+			</setting-item>
+			<setting-item>
+				<div>
+					<setting-text>MAA 可执行文件地址</setting-text>
+					<div class="input-group">
+						<input type="text" spellcheck="false" class="ap-maa-path"></input>
+						<div class="ops-btns">
+							<setting-button data-type="secondary" class="ap-maa-path-apply">应用</setting-button>
+						</div>
+					</div>
+				</div>
+			</setting-item>
+	</setting-panel>
+</setting-section>
+<setting-section data-title="QQ 监听设置">
+	<setting-panel>
+		<setting-list data-direction="column">
+			<setting-item>
+				<div>
+					<setting-text>监听的群聊</setting-text>
+					<div class="input-group">
+						<input type="text" spellcheck="false" class="ap-groups" placeholder="用半角逗号隔开"></input>
+						<div class="ops-btns">
+							<setting-button data-type="secondary" class="ap-groups-apply">应用</setting-button>
+						</div>
+					</div>
+				</div>
+			</setting-item>
+	</setting-panel>
+</setting-section>

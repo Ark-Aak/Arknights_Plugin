@@ -1,0 +1,35 @@
+<div id="ap-popup-overlay"></div>
+<div id="ap-popup">
+    <div id="ap-popup-closeBtn" class="ap-popup-closePopup">&times;</div>
+    <div id="ap-popup-container">
+        <p id="ap-popup-title" class="ap-popup-title"></p>
+        <p id="ap-popup-content"></p>
+    </div>
+</div>
+
+<style>
+    #ap-popup-overlay {
+        position: fixed;
+        top: 0;left: 0;width: 100%;height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999; display: none;
+    }
+    #ap-popup {
+        position: fixed;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;z-index: 10000;
+        border-radius: 5px;display: none;
+    }
+    .ap-popup-closePopup {
+        position: absolute;
+        top: 5px;right: 5px;
+        cursor: pointer;
+    }
+    .ap-popup-closePopup:hover {color: red;}
+    .ap-popup-title {
+        margin-bottom: 8px;
+        font-size: 120%;
+    }
+</style>
