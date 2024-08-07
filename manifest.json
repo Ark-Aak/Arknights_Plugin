@@ -2,22 +2,21 @@
     "$schema": "./manifest_schema.json",
     "manifest_version": 4,
     "type": "extension",
-    "name": "插件模板",
-    "slug": "plugin_template",
-    "description": "LiteLoaderQQNT 的插件模板",
-    "version": "0.1.0",
-    "icon": "./icon.png",
-    "thumb": "./icon.svg",
+    "name": "明日方舟辅助插件",
+    "slug": "arknights_plugin",
+    "description": "一些有用的小功能",
+    "version": "1.0.0",
     "authors": [
         {
-            "name": "LiteLoaderQQNT",
-            "link": "https://github.com/LiteLoaderQQNT"
+            "name": "Federico",
+            "link": "https://github.com/Ark-Aak"
         }
     ],
     "platform": [
-        "win32",
-        "linux",
-        "darwin"
+        "win32"
+    ],
+    "dependencies": [
+        "euphony"
     ],
     "injects": {
         "renderer": "./src/renderer.js",
@@ -25,11 +24,7 @@
         "preload": "./src/preload.js"
     },
     "repository": {
-        "repo": "LiteLoaderQQNT/Plugin-Template",
-        "branch": "main",
-        "release": {
-            "tag": "0.1.0",
-            "file": "Plugin-Template.zip"
-        }
+        "repo": "Ark-Aak/Arknights_Plugin",
+        "branch": "main"
     }
 }
