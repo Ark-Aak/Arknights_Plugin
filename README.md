@@ -1,5 +1,7 @@
 ## Arknights_Plugin 明日方舟辅助插件
 
+插件正在开发中，如遇 bug 请提 issue。
+
 功能：
 
 - 支持远程控制 MAA
